@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="manifest.json" rel="manifest" />
+    <script src="https://cdn.jsdelivr.net/npm/idb@8/build/umd.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f6094340f8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="javaScript/main.js" type="module" async></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="icon" href="assets/icons/toDoIcon.png" />
+    <title>To-Do App</title>
+  </head>
+  <body>
+    <div class="page">
+      <div class="container">
+        <div class="toDoContainer">
+          <h1>To-Do List</h1>
+          <div>
+            <ul></ul>
+          </div>
+        </div>
+        <form>
+          <h2>Add New To-Do</h2>
+          <div class="inputContianer">
+            <p class="error hidden">Name must be unique</p>
+            <div>
+              <label>Task Name:</label>
+              <input
+                placeholder="Enter the task name (unique)"
+                name="title"
+                id="title"
+                type="text"
+                required
+                minlength="3"
+              />
+            </div>
+            <div>
+              <label>Date - Time:</label>
+              <input
+                placeholder=""
+                name="date"
+                id="date"
+                type="datetime-local"
+                required
+              />
+            </div>
+          </div>
+          <button type="submit">Add Task</button>
+        </form>
+      </div>
+    </div>
+    <script src="javaScript/utils/jwcCheck.js"></script>
+  </body>
+</html>

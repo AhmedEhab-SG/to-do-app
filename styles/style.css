@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Rubik+Burned&display=swap");
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: linear-gradient(
+    42deg,
+    rgb(26, 26, 29) 18%,
+    rgb(10, 32, 41) 50%,
+    rgb(9, 4, 34) 85%
+  );
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border-radius: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 2rem;
+  width: 50rem;
+  margin: 1rem;
+  background: linear-gradient(
+    80deg,
+    rgb(18, 31, 44) 18%,
+    rgb(15, 44, 54) 50%,
+    rgb(13, 6, 56) 85%
+  );
+}
+
+.container::after,
+.container::before {
+  content: "";
+  position: absolute;
+  inset: -0.5rem;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--rotate),
+    rgb(21, 9, 161),
+    rgb(150, 150, 253),
+    rgb(41, 10, 88),
+    rgb(150, 150, 253),
+    rgb(21, 9, 150)
+  );
+  animation: spin 15s linear infinite;
+  z-index: -1;
+}
+
+.container::after {
+  filter: blur(0.2rem);
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+/*-----------------------------*/
+/*-todocotinaer -*/
+
+.toDoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.toDoContainer h1 {
+  font-family: "Rubik Burned", system-ui;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  font-size: 2.8rem;
+  text-decoration-color: gray;
+}
+
+.toDoContainer ul {
+  margin-top: 2.5rem;
+  list-style: disc;
+}
+.toDoContainer li {
+  color: rgb(225, 193, 255);
+  font-size: 1.2rem;
+}
+
+/*------------------*/
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  background: linear-gradient(
+    80deg,
+    rgb(40, 54, 66) 18%,
+    rgb(26, 50, 58) 50%,
+    rgb(24, 18, 61) 85%
+  );
+  padding: 1rem;
+  width: 95%;
+  border-radius: 15px;
+  box-shadow: 6px 5px 5px rgb(8, 55, 87);
+}
+
+form h2 {
+  font-family: "Grape Nuts", cursive;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+form .inputContianer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+form div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+form label {
+  font-size: 1.2rem;
+  margin-inline: 0.3rem;
+}
+
+form input {
+  color: black;
+  font-weight: 600;
+  height: 2rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 50%;
+  border-radius: 15px;
+  background-color: rgb(226, 240, 252);
+}
+
+button[type="submit"] {
+  color: black;
+  padding: 0.6rem 1rem;
+  box-sizing: border-box;
+  font-weight: 600;
+  border-radius: 13px;
+  margin-top: 1rem;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background-color: rgb(22, 79, 119);
+  border: 3px solid rgb(15, 49, 73);
+  box-shadow: 2px 2px 1px rgb(8, 55, 87);
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(26, 94, 143);
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.6rem !important;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.icon {
+  color: rgb(78, 70, 190);
+  cursor: pointer;
+}
+
+.timePassed {
+  text-decoration: line-through;
+  color: gray !important;
+}
+
+.error {
+  color: rgb(235, 28, 28);
+  margin: -0.8rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
