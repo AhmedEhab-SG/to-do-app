@@ -11,4 +11,4 @@
 - IndexedDb
 - PWA
 
-Live Link: <a href="https://rent-home-project-not-real-website.vercel.app/">to-do-app</a>
+Live Link: <a href="https://ahmedehab-sg.github.io/to-do-app/">to-do-app</a>
